@@ -18,4 +18,6 @@ Tips:
 * Click group name in the list to select it in control
 * Delete group with delete button
 * Group consists of name and teeth numbers as in
-* ![Image teeth numbering](https://otvet.imgsmail.ru/download/27fa91cb7106e3bded7880f9293f1663_i-73.jpg) 
+![Image teeth numbering](https://otvet.imgsmail.ru/download/27fa91cb7106e3bded7880f9293f1663_i-73.jpg) 
+
+Link to download compiled debug version https://github.com/dv00d00/TeethDemo/blob/master/Debug.zip
