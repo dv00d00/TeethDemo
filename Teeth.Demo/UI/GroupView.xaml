@@ -1,0 +1,27 @@
+﻿<ContentControl x:Class="Teeth.Demo.UI.GroupView"
+                x:Name="It"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="clr-namespace:Teeth.Demo.UI">
+    <ContentControl.Resources>
+        
+        <SolidColorBrush x:Key="StrokeSelectedBrush" Color="#979797"/>
+        <SolidColorBrush x:Key="StrokeNoramlBrush" Color="#000000"/>
+
+        <ui:BoolToBrushConverter x:Key="StrokeConverter" 
+                                 TrueValue="{StaticResource StrokeSelectedBrush}" 
+                                 FalseValue="{StaticResource StrokeNoramlBrush}"/>
+    </ContentControl.Resources>
+    <Grid>
+        <Polyline x:Name="Polyline" 
+                  Visibility="Collapsed"
+                  Stroke="{Binding ElementName=It, Path=IsSelected, Converter={StaticResource StrokeConverter}}" 
+                  StrokeThickness="5" 
+                  MouseDown="GroupClicked"/>
+
+        <Ellipse x:Name="Dot" 
+                 Visibility="Collapsed"
+                  MouseDown="GroupClicked"
+                 Width="8" Height="8" Fill="{Binding ElementName=It, Path=IsSelected, Converter={StaticResource StrokeConverter}}"/>
+    </Grid>
+</ContentControl>
