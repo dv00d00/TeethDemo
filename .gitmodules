@@ -1,0 +1,3 @@
+[submodule "dep/capo"]
+	path = dep/capo
+	url = https://github.com/dv00d00/capo.git
